@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TutorialAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to my second animation" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf2-ed-mMe">
+                                <rect key="frame" x="40" y="225" width="295" height="84"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baE-Ml-g8z">
+                                <rect key="frame" x="40" y="329" width="295" height="107.5"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txw-o8-qRx">
+                                <rect key="frame" x="30" y="587" width="315" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionStartAnimationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PB5-dH-JQK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69411764710000001" green="0.82745098039999998" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="baE-Ml-g8z" firstAttribute="leading" secondItem="hf2-ed-mMe" secondAttribute="leading" id="0Ky-10-kpj"/>
+                            <constraint firstItem="baE-Ml-g8z" firstAttribute="top" secondItem="hf2-ed-mMe" secondAttribute="bottom" constant="20" id="1AN-MT-Lc1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="txw-o8-qRx" secondAttribute="trailing" constant="30" id="HYl-cp-W5Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hf2-ed-mMe" secondAttribute="trailing" constant="40" id="T6Z-8f-u9y"/>
+                            <constraint firstItem="hf2-ed-mMe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ULD-BA-Nms"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="txw-o8-qRx" secondAttribute="bottom" constant="50" id="n4O-WJ-AhX"/>
+                            <constraint firstItem="baE-Ml-g8z" firstAttribute="trailing" secondItem="hf2-ed-mMe" secondAttribute="trailing" id="pD0-Ut-b5d"/>
+                            <constraint firstItem="txw-o8-qRx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="uSi-FI-LBT"/>
+                            <constraint firstItem="hf2-ed-mMe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.8" id="xtw-og-5w4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblDescription" destination="baE-Ml-g8z" id="GRd-mt-yuN"/>
+                        <outlet property="lblTitle" destination="hf2-ed-mMe" id="1O1-1L-ab2"/>
+                        <segue destination="uv5-LP-29M" kind="show" identifier="pushTutorialTwo" id="Ep5-mu-bk9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="134"/>
+        </scene>
+        <!--Tutorial Two-->
+        <scene sceneID="83r-n2-UCX">
+            <objects>
+                <viewController id="uv5-LP-29M" customClass="TutorialTwo" customModule="TutorialAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YaX-ct-Igy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGU-kU-qK1">
+                                <rect key="frame" x="40" y="245.5" width="295" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgn-3O-WXn">
+                                <rect key="frame" x="40" y="308.5" width="295" height="107.5"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEs-gM-KNd">
+                                <rect key="frame" x="30" y="587" width="315" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionStartAnimationTapped:" destination="uv5-LP-29M" eventType="touchUpInside" id="bHk-UI-kuf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89411764709999997" green="0.43921568630000002" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="c1r-fp-kNV" firstAttribute="bottom" secondItem="HEs-gM-KNd" secondAttribute="bottom" constant="50" id="NBf-fj-l22"/>
+                            <constraint firstItem="c1r-fp-kNV" firstAttribute="trailing" secondItem="NGU-kU-qK1" secondAttribute="trailing" constant="40" id="TAu-s2-8Qf"/>
+                            <constraint firstItem="qgn-3O-WXn" firstAttribute="trailing" secondItem="NGU-kU-qK1" secondAttribute="trailing" id="WVX-eb-g9y"/>
+                            <constraint firstItem="qgn-3O-WXn" firstAttribute="leading" secondItem="NGU-kU-qK1" secondAttribute="leading" id="k5U-ws-O57"/>
+                            <constraint firstItem="HEs-gM-KNd" firstAttribute="leading" secondItem="c1r-fp-kNV" secondAttribute="leading" constant="30" id="lxw-ov-Msw"/>
+                            <constraint firstItem="c1r-fp-kNV" firstAttribute="trailing" secondItem="HEs-gM-KNd" secondAttribute="trailing" constant="30" id="ozN-hW-mhV"/>
+                            <constraint firstItem="NGU-kU-qK1" firstAttribute="leading" secondItem="c1r-fp-kNV" secondAttribute="leading" constant="40" id="qyF-d1-SLP"/>
+                            <constraint firstItem="NGU-kU-qK1" firstAttribute="centerY" secondItem="YaX-ct-Igy" secondAttribute="centerY" multiplier="0.8" id="sGo-V2-YkT"/>
+                            <constraint firstItem="qgn-3O-WXn" firstAttribute="top" secondItem="NGU-kU-qK1" secondAttribute="bottom" constant="20" id="tfq-im-Z4J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c1r-fp-kNV"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblDescription" destination="qgn-3O-WXn" id="PXu-Re-lok"/>
+                        <outlet property="lblTitle" destination="NGU-kU-qK1" id="3Z7-So-8L6"/>
+                        <segue destination="XUc-7q-4nx" kind="show" identifier="pushTutorialTrhee" id="Gdg-nt-Hwy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7H-cq-Kre" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="134"/>
+        </scene>
+        <!--Tutorial Trhee-->
+        <scene sceneID="SqV-ui-cRL">
+            <objects>
+                <viewController id="XUc-7q-4nx" customClass="TutorialTrhee" customModule="TutorialAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sqW-40-GPg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 3" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX1-1J-e47">
+                                <rect key="frame" x="40" y="245.5" width="295" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVe-SD-JsV">
+                                <rect key="frame" x="40" y="308.5" width="295" height="107.5"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qv-ob-QRw">
+                                <rect key="frame" x="30" y="587" width="315" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionStartAnimationTapped:" destination="XUc-7q-4nx" eventType="touchUpInside" id="Q8c-oB-7JA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Qv-ob-QRw" firstAttribute="leading" secondItem="ZC2-zR-G1s" secondAttribute="leading" constant="30" id="3vZ-ZD-ANt"/>
+                            <constraint firstItem="ZC2-zR-G1s" firstAttribute="bottom" secondItem="7Qv-ob-QRw" secondAttribute="bottom" constant="50" id="CRr-Ct-L42"/>
+                            <constraint firstItem="ZC2-zR-G1s" firstAttribute="trailing" secondItem="7Qv-ob-QRw" secondAttribute="trailing" constant="30" id="GE1-Ko-LKF"/>
+                            <constraint firstItem="ZC2-zR-G1s" firstAttribute="trailing" secondItem="bX1-1J-e47" secondAttribute="trailing" constant="40" id="GOV-WB-iUG"/>
+                            <constraint firstItem="tVe-SD-JsV" firstAttribute="trailing" secondItem="bX1-1J-e47" secondAttribute="trailing" id="Nj5-JC-VNm"/>
+                            <constraint firstItem="bX1-1J-e47" firstAttribute="centerY" secondItem="sqW-40-GPg" secondAttribute="centerY" multiplier="0.8" id="cEm-7y-SxL"/>
+                            <constraint firstItem="tVe-SD-JsV" firstAttribute="top" secondItem="bX1-1J-e47" secondAttribute="bottom" constant="20" id="hKA-JX-2OX"/>
+                            <constraint firstItem="tVe-SD-JsV" firstAttribute="leading" secondItem="bX1-1J-e47" secondAttribute="leading" id="iLm-vF-wHV"/>
+                            <constraint firstItem="bX1-1J-e47" firstAttribute="leading" secondItem="ZC2-zR-G1s" secondAttribute="leading" constant="40" id="tPc-Pg-sei"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZC2-zR-G1s"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblDescription" destination="tVe-SD-JsV" id="Z9k-s4-Pjh"/>
+                        <outlet property="lblTitle" destination="bX1-1J-e47" id="LKZ-88-ZZd"/>
+                        <segue destination="1Nk-fy-KHr" kind="show" identifier="pushTutorialFour" id="W8f-Cq-ktg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qbt-Lf-AZg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="134"/>
+        </scene>
+        <!--Tutorial Four-->
+        <scene sceneID="Aww-oW-0F4">
+            <objects>
+                <viewController id="1Nk-fy-KHr" customClass="TutorialFour" customModule="TutorialAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KP1-dP-Tdj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finished tutorial" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtb-Ho-6A1">
+                                <rect key="frame" x="40" y="245.5" width="295" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83w-TU-VjC">
+                                <rect key="frame" x="40" y="308.5" width="295" height="107.5"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.02633150108" green="0.35310867429999998" blue="0.84045517439999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="83w-TU-VjC" firstAttribute="top" secondItem="Wtb-Ho-6A1" secondAttribute="bottom" constant="20" id="F8e-vB-wYl"/>
+                            <constraint firstItem="83w-TU-VjC" firstAttribute="leading" secondItem="Wtb-Ho-6A1" secondAttribute="leading" id="mgX-Ul-INM"/>
+                            <constraint firstItem="83w-TU-VjC" firstAttribute="trailing" secondItem="Wtb-Ho-6A1" secondAttribute="trailing" id="pYk-LO-gNl"/>
+                            <constraint firstItem="D2u-dD-ju5" firstAttribute="trailing" secondItem="Wtb-Ho-6A1" secondAttribute="trailing" constant="40" id="ptC-uo-aab"/>
+                            <constraint firstItem="Wtb-Ho-6A1" firstAttribute="leading" secondItem="D2u-dD-ju5" secondAttribute="leading" constant="40" id="wB3-zZ-w0Y"/>
+                            <constraint firstItem="Wtb-Ho-6A1" firstAttribute="centerY" secondItem="KP1-dP-Tdj" secondAttribute="centerY" multiplier="0.8" id="y8E-bq-ATR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D2u-dD-ju5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rkd-EN-kth" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2338" y="134"/>
+        </scene>
+    </scenes>
+</document>
